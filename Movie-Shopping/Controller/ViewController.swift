@@ -44,6 +44,9 @@ class ViewController: UIViewController {
         filmCollectionView.delegate = self
         filmCollectionView.dataSource = self
         
+       
+    }
+    func createMovie() {
         let f1 = Movies(filmId: 1, filmBaslik: "Django", filmFiyat: 15.99, filmResimAdi: "django")
         let f2 = Movies(filmId: 2, filmBaslik: "Inception", filmFiyat: 15.99, filmResimAdi: "inception")
         let f3 = Movies(filmId: 3, filmBaslik: "Interstellar", filmFiyat: 15.99, filmResimAdi: "interstellar")
@@ -59,8 +62,8 @@ class ViewController: UIViewController {
         filmlerListesi.append(f6)
     }
 
-
 }
+
 //commit
 var increase = 0
 extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource,filmHucreProtocol {
