@@ -61,6 +61,7 @@ class ViewController: UIViewController {
 
 
 }
+//commit
 var increase = 0
 extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource,filmHucreProtocol {
     func sepeteEkle(indexPath: IndexPath) {
