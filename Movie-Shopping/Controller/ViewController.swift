@@ -16,10 +16,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        design()
+        createMovie()
+        
+        
+        
+      
+       
+    }
+    func design() {
         let userD = UserDefaults.standard
-        
-        
-        
         if let tabItems = tabBarController?.tabBar.items {
             // In this case we want to modify the badge number of the third tab:
             let tabItem = tabItems[0]
@@ -44,7 +50,6 @@ class ViewController: UIViewController {
         filmCollectionView.delegate = self
         filmCollectionView.dataSource = self
         
-       
     }
     func createMovie() {
         let f1 = Movies(filmId: 1, filmBaslik: "Django", filmFiyat: 15.99, filmResimAdi: "django")
