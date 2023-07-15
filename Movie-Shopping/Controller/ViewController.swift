@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var filmlerListesi = [Movies]()
-    
+    var increase = 0
     @IBOutlet weak var filmCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -18,11 +18,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         design()
         createMovie()
-        
-        
-        
-      
-       
     }
     func design() {
         let userD = UserDefaults.standard
@@ -70,7 +65,7 @@ class ViewController: UIViewController {
 }
 
 //commit
-var increase = 0
+
 extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource,filmHucreProtocol {
     func sepeteEkle(indexPath: IndexPath) {
         let film = filmlerListesi[indexPath.row]
